@@ -1,0 +1,71 @@
+<html>
+
+<head>
+	<title> WEB FORMS </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body text="white">
+
+	<header class="head">
+		<div class="div">
+			<nav class="nav">
+				<ul><b><h3>
+						<li><a href="index.html">HOME</a></li>
+							<div class="dropdown">
+								<button class="dropbttn"><b>CHAPTERS</b></button>
+									<div class="dropdown-content">
+										<a href="Chapter2.html">CHAPTER 2</a>
+										<a href="Chapter3.html">CHAPTER 3</a>
+										<a href="Chapter4.html">CHAPTER 4</a>
+										<a href="Chapter5.html">CHAPTER 5</a>
+										<a href="Chapter6.html">CHAPTER 6</a>
+										<a href="Chapter7.html">CHAPTER 7</a>
+										<a href="Chapter8.html">CHAPTER 8</a>
+									</div>
+							</div>
+				</h3></b></ul>
+			</nav>
+		</div>
+	</header>
+	
+<br><br>
+		
+<div class="container">
+<div class="upload" style="margin-left:100px";>
+<pre>
+<input type="file" accept="image/png, image/jpg, image/jpeg" name="image" id="file" onchange="loadFile(event)" style="font-family:Bell MT; font-size:13px; display:none";>
+<button style="background:black; color:white; height:30px; border-radius:10px; font-family:Garamond; font-size:15px; margin:-125px; margin-left:-6px";><label for="file" style="cursor:pointer";>Upload Photo</label></button>
+<img id="output" width="200" height="230" style="margin-left:-56px; margin-top:-85px; margin-bottom:-275px";>
+		
+<script>
+		var loadFile = function(event) {
+		var image = document.getElementById('output');
+		image.src = URL.createObjectURL(event.target.files[0]);
+		};
+</script>
+
+</pre>
+</div>
+</div>
+		
+<center class="resume">
+
+<form>
+   
+<pre style="font-family:Bell MT; margin-top:-150px ;">
+<label for="fname">First name:       </label><input type="text" id="fname" name="fname" placeholder="First name" style="font-family:Bell MT; font-size:15px"; required><br>
+<label for="mname">Middle name:   </label><input type="text" id="mname" name="mname" placeholder="Middle name" style="font-family:Bell MT; font-size:15px";><br>
+<label for="lname">Last name:        </label><input type="text" id="lname" name="lname" placeholder="Last name" style="font-family:Bell MT; font-size:15px"; required><br>
+<label for="age">Age:     </label><input type="text" size="2" id="age" name="age" placeholder="Age"  pattern="[0-9]{2}" style="font-family:Bell MT; font-size:15px"; required>	<label for="date of birth">Date of Birth:   </label><input type="date" id="send" name="dtb" oninput="result.value = send.value" style="font-family:Bell MT; font-size:15px"; required><br>
+<label for="gender" >Gender:	</label><input type="radio" id="male" name="gender" value="male" style="font-family:Bell MT; font-size:15px";><label for="male">Male</label> <input type="radio" id="female" name="gender" value="female" style="font-family:Bell MT; font-size:15px";><label for="female">Female</label>	<input type="radio" id="other" name="gender" value="other" style="font-family:Bell MT; font-size:15px"; required><label for="other">Other</label><br> 
+<label for="address">Address:   </label><input type="text" size="40" id="address" name="address" placeholder="Address" style="font-family:Bell MT; font-size:15px"; required><br>
+<label for="phone">Phone number:  </label> <input type="tel" size="13" id="phone" name="phone" placeholder="0912-345-6789" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" style="font-family:Garamond; font-size:15px"; required><br>
+<label for="email">Email address:	<input type="email" name="email" id="email" placeholder="Email address"  pattern=".+@gmail.com" size="20" style="font-family:Bell MT; font-size:15px"; required><br><br>
+<label for="submit"><input type="submit" name="submit" id="submit">	<label for="reset"><input type="reset" name="reset" id="reset">
+</form>
+</center>
+</pre>
+
+</body>
+</html>
